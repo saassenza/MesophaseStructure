@@ -82,14 +82,6 @@ where *A*<sub>0</sub> and χ are the unit-cell area and Euler–Poincaré charac
 
 **Lamellar phase:** water lamellae of thickness d<sub>w</sub> = a φ<sub>w</sub> and lipid length L = a φ<sub>L</sub>/2.
 
-## Tests
-
-```bash
-python -m unittest discover tests
-```
-
-The tests check that the results match the online tool.
-
 ## How to cite
 
 If you use this tool in your research, please cite:
