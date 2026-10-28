@@ -78,7 +78,7 @@ where *A*<sub>0</sub> and χ are the unit-cell area and Euler–Poincaré charac
 | Im3m | 2.345 | −4 |
 | Ia3d | 3.091 | −8 |
 
-**Inverse hexagonal phase** (Seddon): r = a √(√3 φ<sub>w</sub> / 2π). Two lipid lengths are given: the unfrustrated length L<sub>unf</sub> = a/2 − r (Seddon; Mezzenga et al.) and the average length L<sub>ave</sub> = (3 ln 3 / 2π) a − r.
+**Inverse hexagonal phase** (Seddon): $r = a\sqrt{\frac{\sqrt{3}}{2\pi}\phi_w}$. Two lipid lengths are given: the unfrustrated length L<sub>unf</sub> = a/2 − r (Seddon; Mezzenga et al.) and the average length L<sub>ave</sub> = (3 ln 3 / 2π) a − r.
 
 **Lamellar phase:** water lamellae of thickness d<sub>w</sub> = a φ<sub>w</sub> and lipid length L = a φ<sub>L</sub>/2.
 
