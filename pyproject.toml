@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mesophase-structure"
+version = "1.0.0"
+description = "Structural parameters of lipid mesophases (cubic, hexagonal, lamellar) from SAXS data"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Salvatore Assenza"}]
+requires-python = ">=3.8"
+keywords = ["lipid mesophases", "cubic phases", "SAXS", "soft matter"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+[project.urls]
+Homepage = "https://github.com/saassenza/MesophaseStructure"
+"Online tool" = "https://www.salvatoreassenza.com/#tools"
+
+[project.scripts]
+mesophase-structure = "mesophase_structure.cli:main"
+
+[tool.setuptools]
+packages = ["mesophase_structure"]
