@@ -2,9 +2,6 @@
 
 Structural parameters of lipid mesophases from their SAXS lattice parameter: the radius of the water channels, the thickness of the water lamellae and the lipid length. It covers bicontinuous cubic phases (Pn3m, Im3m, Ia3d), the inverse hexagonal phase (Hex) and the lamellar phase (Lα).
 
-This is the Python version of the *Structural info of mesophases* tool available online at
-[www.salvatoreassenza.com/#tools](https://www.salvatoreassenza.com/#tools). It gives identical results, and it adds batch processing of whole data sets and use from your own scripts.
-
 Pure Python (≥ 3.8), no dependencies.
 
 ## Installation
