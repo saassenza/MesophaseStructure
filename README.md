@@ -111,4 +111,4 @@ MIT, see [LICENSE](LICENSE).
 
 ## Contact
 
-Salvatore Assenza, Universidad Autónoma de Madrid (IFIMAC) – [www.salvatoreassenza.com](https://www.salvatoreassenza.com)
+Salvatore Assenza, Universidad Autónoma de Madrid (IFIMAC)
