@@ -1,8 +1,5 @@
 """Structural parameters of lipid mesophases from SAXS lattice parameters.
 
-Python port of the "Structural info of mesophases" tool available at
-https://www.salvatoreassenza.com/#tools. Results are identical to the online tool.
-
 Supported phases
 ----------------
 - Bicontinuous cubic phases Pn3m, Im3m and Ia3d: lipid length following

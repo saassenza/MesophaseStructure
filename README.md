@@ -44,25 +44,24 @@ res = structure("Pn3m", lattice=8.57, water_weight=36, lipid_density=1.05)
 print(res.radius, res.lipid_length)
 ```
 
-`structure()` returns a `StructureResult` with fields `radius` (cubic and Hex), `water_thickness` (Lα), `lipid_length` (L<sub>unf</sub> for Hex), `lipid_length_average` (Hex only), `water_volume_fraction` and `lipid_volume_fraction`.
+`structure()` returns a `StructureResult` with fields `radius` (cubic and Hex), `water_thickness` (Lα), `lipid_length` ($L_\mathrm{unf}$ for Hex), `lipid_length_average` (Hex only), `water_volume_fraction` and `lipid_volume_fraction`.
 
 ## Inputs and units
 
 | Input | Unit | Description |
 |---|---|---|
 | `phase` | – | `Pn3m`, `Im3m`, `Ia3d`, `Hex` or `La` |
-| `lattice` | nm | lattice parameter *a*, from SAXS |
+| `lattice` | nm | lattice parameter $a$, from SAXS (for Hex: distance between neighbouring cylinder axes, $a = 2d_{10}/\sqrt{3}$) |
 | `water` | % weight | water used to prepare the mesophase |
 | `density` | g/cm³ | density of the lipid (water is taken as 1 g/cm³) |
 
 ## Model
 
-The water volume fraction φ<sub>w</sub> follows from the water weight percentage *c*<sub>w</sub> and the lipid density ρ<sub>L</sub>:
+The water volume fraction $\phi_w$ follows from the water weight percentage $c_w$ and the lipid density $\rho_L$ (water density taken as 1 g/cm³):
 
 $$\phi_w = 1 - \frac{1}{1 + \rho_L\, c_w/(100 - c_w)}, \qquad \phi_L = 1 - \phi_w .$$
 
-**Bicontinuous cubic phases.** The lipid length *L* is the solution of
-(Turner et al.)
+**Bicontinuous cubic phases.** The lipid length $L$ is the solution of (Turner et al.)
 
 $$\phi_L = 2A_0\,\frac{L}{a} + \frac{4\pi}{3}\,\chi \left(\frac{L}{a}\right)^3 ,$$
 
@@ -70,17 +69,25 @@ and the radius of the water channels is (Briggs et al.)
 
 $$r = a\sqrt{-\frac{A_0}{2\pi\chi}} - L ,$$
 
-where *A*<sub>0</sub> and χ are the unit-cell area and Euler–Poincaré characteristic of the underlying minimal surface:
+where $A_0$ and $\chi$ are the unit-cell area and Euler–Poincaré characteristic of the underlying minimal surface:
 
-| Phase | *A*<sub>0</sub> | χ |
+| Phase | $A_0$ | $\chi$ |
 |---|---|---|
 | Pn3m | 1.919 | −2 |
 | Im3m | 2.345 | −4 |
 | Ia3d | 3.091 | −8 |
 
-**Inverse hexagonal phase** (Seddon): $r = a\sqrt{\frac{\sqrt{3}}{2\pi}\phi_w}$. Two lipid lengths are given: the unfrustrated length L<sub>unf</sub> = a/2 − r (Seddon; Mezzenga et al.) and the average length L<sub>ave</sub> = (3 ln 3 / 2π) a − r.
+**Inverse hexagonal phase** (Seddon). The radius of the water cylinders is
 
-**Lamellar phase:** water lamellae of thickness d<sub>w</sub> = a φ<sub>w</sub> and lipid length L = a φ<sub>L</sub>/2.
+$$r = a\sqrt{\frac{\sqrt{3}}{2\pi}\,\phi_w} ,$$
+
+and two lipid lengths are given: the unfrustrated length (Seddon; Mezzenga et al.) and the average length,
+
+$$L_\mathrm{unf} = \frac{a}{2} - r, \qquad L_\mathrm{ave} = \frac{3\ln 3}{2\pi}\,a - r .$$
+
+**Lamellar phase.** Thickness of the water lamellae and lipid length:
+
+$$d_w = a\,\phi_w, \qquad L = \frac{a\,\phi_L}{2} .$$
 
 ## How to cite
 
